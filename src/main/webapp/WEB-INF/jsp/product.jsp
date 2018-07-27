@@ -4,6 +4,7 @@
     pageContext.setAttribute("path", request.getContextPath());
 %>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,21 +87,26 @@
     </div>
 </div>
 <!-- 产品列表 -->
-<div class="box1">
-  <div class="top">现金宝1</div>
-  <div class="foot">
-     <div class="foot_left">七日年化收益率</div>
-     <div class="foot_right"><a href="#">详情</a></div>
-  </div>
-<div class="box1">
-  <div class="top">现金宝2</div>
-  <div class="foot">
-     <div class="foot_left">七日年化收益率</div>
-     <div class="foot_right"><a href="#">详情</a></div>
-  </div>
-
-
- </div>
-</div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <tr>
+                        <th>产品编号</th>
+                        <th>产品名</th>
+                        <th>七日年化收益</th>
+                        <th>万份收益</th>
+                    </tr>
+                    <c:forEach items="${pageInfo.list }" var="user">
+                        <tr>
+                        <td>${user.id}</td>
+                        <td>${user.name }</td>
+                        <td>${user.age }</td>
+                        <td>${user.age }</td>
+                        <td><a href="#">详情</a></td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </div>
+        </div>
 </body>
 </html>
