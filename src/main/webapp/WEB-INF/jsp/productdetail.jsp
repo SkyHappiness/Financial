@@ -111,7 +111,7 @@
     赎回信息
   </div>
   <div class="foot">
-     <a class="btn btn-primary" href="${path}/user/toAddUser">购买</a>
+     <button class="btn btn-primary">购买</button>
   </div>
 
  </div>
