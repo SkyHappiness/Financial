@@ -11,25 +11,17 @@
 .box1{
   width:500px;
   height:420px;
-  border: 1px solid #c0c0c0;
   margin-top: 20px;
 }
  
-
-.top{
-  margin: 0 auto;
-  width: auto;
-  height:10px;
-  text-align:center;
-  padding:12px;
-}
-
 .middle1{
   margin: 0 auto;
   width: auto;
   height: 60px;
   text-align:center;
   padding:12px;
+  border: 1px solid #c0c0c0;
+
 }
   
 
@@ -39,7 +31,6 @@
   float: left;
   text-align:center;
   padding:10px;
-  border: 1px solid #c0c0c0;
 
 }
 
@@ -50,7 +41,6 @@
   text-align:center;
   margin-left:10px;
   padding:10px; 
-  border: 1px solid #c0c0c0;
 }
 
 .middle2{
@@ -59,28 +49,12 @@
   height: 100px;
   text-align:center;
   padding:12px;
-  border: 1px solid #c0c0c0;
-}
-
-.middle3{
-  margin: 0 auto;
-  width: auto;
-  height: 100px;
-  text-align:center;
-  padding:12px;
-  border: 1px solid #c0c0c0;
-}
-.foot{
-  margin: 0 auto;
-  width: auto;
-  height: 20px;
-  text-align:center;
-  padding:12px;
+   margin-top: 10px;
 }
 
 </style>
 <meta charset="utf-8">
-<title>产品详情页面</title>
+<title>收益明细页面</title>
 <link
     href="${path}/static/bootstrap-4.0.0-dist/css/bootstrap.min.css"
     rel="stylesheet">
@@ -91,32 +65,43 @@
 </head>
 <body>
 <div class="container">
-<!-- 产品列表 -->
 <div class="box1">
-  <div class="top"><td>${user.name}</td></div>
-  <div class="middle1">
+<!-- 标题 -->
+<div class="row">
+            <div class="col-md-12">
+                <h1>收益明细</h1>
+            </div>
+</div>
+<!-- -->
+ <div class="middle1">
      <div class="middle1_left">
-     七日年化收益率</br>
+     昨日收益</br>
      ${user.name}
      </div>
      <div class="middle1_right">
-     万份收益</br>
+     累计总收益</br>
      ${user.name}
      </div>
   </div>
-  <div class="middle2">
-    购买信息
-  </div>
-  <div class="middle3">
-    赎回信息
-  </div>
-  <div class="foot">
-     <a class="btn btn-primary" href="${path}/user/toAddUser">购买</a>
-  </div>
-
- </div>
-</div>
+<!-- 明细列表 -->
+        <div class="middle2">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <tr>
+                        <th>编号</th>
+                        <th>产品名</th>
+                        <th>累计收益</th>
+                    </tr>
+                    <c:forEach items="${pageInfo.list }" var="user">
+                        <tr>
+                        <td>${user.id}</td>
+                        <td>${user.name }</td>
+                        <td>${user.age }</td>
+                        </tr>
+                    </c:forEach>
+                </table>
+            </div>
+        </div>
+       </div>
 </body>
 </html>
-
-
