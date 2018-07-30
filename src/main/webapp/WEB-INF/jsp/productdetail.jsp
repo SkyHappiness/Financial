@@ -96,27 +96,31 @@
   <div class="top"><td>${user.name}</td></div>
   <div class="middle1">
      <div class="middle1_left">
-     七日年化收益率</br>
+      七日年化收益率</br>
      ${user.name}
      </div>
      <div class="middle1_right">
-     万份收益</br>
+       万份收益</br>
      ${user.name}
      </div>
   </div>
   <div class="middle2">
-    购买信息
+    <font size="3">购买信息</font></br>
+    <font size="2">起购金额</font> </br>
+    <font size="2">份额确认信息</font>
   </div>
   <div class="middle3">
-    赎回信息
+    <font size="3">赎回信息</font></br>
+    <font size="2">赎回费率</font> </br>
+    <font size="2">到账时间</font>
   </div>
   <div class="foot">
+     <a href="#">
      <button class="btn btn-primary">购买</button>
+     </a>
   </div>
 
  </div>
 </div>
 </body>
 </html>
-
-

@@ -80,7 +80,9 @@
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="请输入检索关键字">
                 <span class="input-group-btn">
-                    <button class="btn btn-primary">搜索</button>
+                    <a href="#">
+                    <button class="btn btn-primary" >搜索</button>
+                    </a>
                 </span>
             </div>
         </div>
