@@ -65,6 +65,8 @@
 <script type="text/javascript"
     src="${path}/static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
 <div class="container">
 <!-- 标题 -->
