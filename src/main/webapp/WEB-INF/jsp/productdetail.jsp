@@ -106,13 +106,11 @@
   </div>
   <div class="middle2">
     <font size="3">购买信息</font></br>
-    <font size="2">起购金额</font> </br>
-    <font size="2">份额确认信息</font>
+    ${user.name}
   </div>
   <div class="middle3">
     <font size="3">赎回信息</font></br>
-    <font size="2">赎回费率</font> </br>
-    <font size="2">到账时间</font>
+   ${user.name}
   </div>
   <div class="foot">
      <a href="#">
