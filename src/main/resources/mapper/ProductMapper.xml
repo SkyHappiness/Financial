@@ -4,15 +4,15 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.financial.dao.ProductDao">
     <!-- 查询所有 -->
-	<select id="getProduct" resultType="com.financial.dao.ProductDao">
+	<select id="getProduct" resultType="com.financial.entity.Product">
 		select * FROM product
 	</select>
 	<!-- 根据id查找单个 -->
-	<select id="findProductById" parameterType="int" resultType="com.financial.dao.ProductDao">
+	<select id="findProductById" parameterType="int" resultType="com.financial.entity.Product">
 		select * from product where id=#{id}
 	</select>
 	<!-- 根据name查找 -->
-	<select id="findProductByName"  resultType="com.financial.dao.ProductDao">
-		select * from product where name like #{name}
+	<select id="findProductByName" parameterType="String" resultType="com.financial.entity.Product">
+		select * from product where name like "%"#{name}"%"
 	</select>
 </mapper>

@@ -37,7 +37,7 @@ public class UserTest {
 	
 	@Test
 	public void testgetUserById() {
-		int id=7;
+		int id=1;
 		User user = userService.findUserById(id);
 		System.out.println(user);
 	}
