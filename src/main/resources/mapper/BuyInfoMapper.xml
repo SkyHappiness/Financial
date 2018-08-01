@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.financial.dao.BuyInfoDao">
+    <!-- 查询所有 -->
+	<select id="getBuyInfo" resultType="com.financial.dao.BuyInfo">
+		select * FROM buyInfo
+	</select>
+	<!--查询购买金额  -->
+	<select id="getBuyMoney">
+		select money from buyInfo 
+	</select>
+</mapper>

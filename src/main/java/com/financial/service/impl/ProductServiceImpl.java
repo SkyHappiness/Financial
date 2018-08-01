@@ -3,12 +3,13 @@ package com.financial.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.financial.dao.ProductDao;
 import com.financial.entity.Product;
 import com.financial.service.ProductService;
 
-
+@Service
 public class ProductServiceImpl implements ProductService{
 	
     @Autowired
