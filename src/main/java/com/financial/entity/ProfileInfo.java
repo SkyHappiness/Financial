@@ -4,7 +4,7 @@ package com.financial.entity;
  * author: hxy
  * time:   2018-7-31
  */
-public class Profile {
+public class ProfileInfo {
 
 	private Integer profileId;
 	private Integer profileProId;
@@ -13,7 +13,7 @@ public class Profile {
 	private Double profileMoney;
 	private Integer flag;
 
-	public Profile() {
+	public ProfileInfo() {
 		this.flag = 1;
 	}
 
