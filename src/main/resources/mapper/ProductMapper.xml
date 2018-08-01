@@ -13,7 +13,6 @@
 	</select>
 	<!-- 根据name查找 -->
 	<select id="findProductByName"  resultType="com.financial.dao.ProductDao">
-		select * from product where name like #{id}
+		select * from product where name like #{name}
 	</select>
-
 </mapper>

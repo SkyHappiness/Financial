@@ -27,5 +27,21 @@ public class ProductTest {
 		}
 	}
 	
+	@Test
+	public void testfindProductById() {
+		int id=1;
+		Product product = productService.findProductById(id);
+		System.out.println(product);
+	}
+	
+	@Test
+	public void testfindProductByName() {
+		String name="余额宝";
+		List<Product> Products = productService.findProductByName(name);
+		for (Product product : Products) {
+			System.out.println(product);
+		}
+	}
+	
 	
 }
