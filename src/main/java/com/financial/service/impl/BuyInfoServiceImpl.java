@@ -22,12 +22,15 @@ public class BuyInfoServiceImpl implements BuyInfoService{
 	}
 
 	@Override
-	public int getAllBuyMoney() {
+	public int getBuyMoney(){
 		// TODO Auto-generated method stub
-		int[] ary=buyInfoDao.getBuyMoney();
+		List<Integer> list=buyInfoDao.getBuyMoney();
+		if (list.isEmpty()) {
+			return 0;
+		}
 		int sum = 0;
-		for(int i=0;i<ary.length; i++){
-		sum=sum+ary[i];
+		for(int i = 0; i < list.size(); i++){
+			sum += list.get(i);
 		}
 		return sum;
 	}

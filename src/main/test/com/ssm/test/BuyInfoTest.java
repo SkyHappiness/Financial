@@ -28,7 +28,7 @@ public class BuyInfoTest {
 	
 	@Test
 	public void testgetAllBuyMoney() {
-		int money=buyInfoService.getAllBuyMoney();
+		int money=buyInfoService.getBuyMoney();
 		System.out.println(money);
 	}
 }

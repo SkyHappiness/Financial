@@ -8,5 +8,5 @@ public interface BuyInfoService {
 	 //查询所有交易信息
 	 public List<BuyInfo> getBuyInfo();
 	 //计算所有交易金额
-	 public int  getAllBuyMoney();
+	 public int getBuyMoney();
 }

@@ -8,7 +8,7 @@
 		select * FROM buyInfo
 	</select>
 	<!--查询购买金额  -->
-	<select id="getBuyMoney">
+	<select id="getBuyMoney" resultType="java.lang.Integer">
 		select money from buyInfo 
 	</select>
 </mapper>
