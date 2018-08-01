@@ -4,7 +4,7 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.financial.dao.BuyInfoDao">
     <!-- 查询所有 -->
-	<select id="getBuyInfo" resultType="com.financial.dao.BuyInfo">
+	<select id="getBuyInfo" resultType="com.financial.entity.BuyInfo">
 		select * FROM buyInfo
 	</select>
 	<!--查询购买金额  -->
