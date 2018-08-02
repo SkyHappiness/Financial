@@ -9,7 +9,7 @@ public class ProfileInfo {
 	private Integer profileId;
 	private Integer profileProId;
 	private String profileProName;
-	private Double profileYestoday;
+	private Double profileYesterday;
 	private Double profileMoney;
 	private Integer flag;
 
@@ -41,6 +41,14 @@ public class ProfileInfo {
 		this.profileProName = profileProName;
 	}
 
+	public Double getprofileYesterday() {
+		return profileYesterday;
+	}
+
+	public void setProfileYestoday(Double profileYesterday) {
+		this.profileYesterday = profileYesterday;
+	}
+	
 	public Double getProfileMoney() {
 		return profileMoney;
 	}
@@ -57,18 +65,12 @@ public class ProfileInfo {
 		this.flag = flag;
 	}
 
-	public Double getProfileYestoday() {
-		return profileYestoday;
-	}
-
-	public void setProfileYestoday(Double profileYestoday) {
-		this.profileYestoday = profileYestoday;
-	}
+	
 
 	@Override
 	public String toString() {
 		return "Profile [profileId=" + profileId + ", profileProId=" + profileProId + ", profileProName="
-				+ profileProName + ", profileYestoday=" + profileYestoday + ", profileMoney=" + profileMoney + ", flag="
+				+ profileProName + ", profileYesterday=" + profileYesterday + ", profileMoney=" + profileMoney + ", flag="
 				+ flag + "]";
 	}
 
