@@ -101,14 +101,14 @@
                         <th>万份收益</th>
                         <th>投资期限</th>
                     </tr>
-                    <c:forEach items="${pageInfo.list }" var="user">
+                    <c:forEach items="${pageInfo.list}" var="product">
                         <tr>
-                        <td>${user.id}</td>
-                        <td>${user.name }</td>
-                        <td>${user.age }</td>
-                        <td>${user.age }</td>
-                        <td>${user.age }</td>
-                        <td><a href="#">详情</a></td>
+                        <td>${product.id}</td>
+                        <td>${product.name}</td>
+                        <td>${product.yearPro}</td>
+                        <td>${product.dayPro}</td>
+                        <td>${product.timeLong}</td>
+                        <td><a href="${path}/pro/toProductdetail">详情</a></td>
                         </tr>
                     </c:forEach>
                 </table>
@@ -133,7 +133,7 @@
                     <li><a href="${path}/user/userInfo?pn=1">首页</a></li>
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
-                          <a href="${path}/user/userInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                           </a>
                         </li>
@@ -144,17 +144,17 @@
                             <li class="active"><a href="#">${ page_Num}</a></li>
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/user/userInfo?pn=${ page_Num}">${ page_Num}</a></li>
+                            <li><a href="${path}/pro/productInfo?pn=${ page_Num}">${page_Num}</a></li>
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">
                         <li>
-                          <a href="${path}/user/userInfo?pn=${pageInfo.pageNum+1}" aria-label="Next">
+                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum+1}" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                           </a>
                         </li>
                     </c:if>   
-                    <li><a href="${path}/user/userInfo?pn=${pageInfo.pages}">末页</a></li>
+                    <li><a href="${path}/pro/productInfo?pn=${pageInfo.pages}">末页</a></li>
                   </ul>
                 </nav>
             </div>

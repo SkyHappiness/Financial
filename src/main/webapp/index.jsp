@@ -139,13 +139,13 @@ window.onload = function(){
             <div class="dom" style="display: block;">
                 <ul>
                     <li>
-                    	<a href="${path}/WEB-INF/jsp/product.jsp">点击进入理财产品专区</a></li>   
+                    	<a href="${path}/pro/productInfo">点击进入理财产品专区</a></li>   
                 </ul>
             </div>
             <div class="dom">
                 <ul>
                     <li>
-                        <a href="${path}/WEB-INF/jsp/personal.jsp">点击进入个人中心专区</a>
+                        <a href="${path}/per/personalInfo">点击进入个人中心专区</a>
                     </li>  
                 </ul>
             </div>
