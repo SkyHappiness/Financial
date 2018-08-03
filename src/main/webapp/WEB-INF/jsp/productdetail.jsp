@@ -93,24 +93,24 @@
 <div class="container">
 <!-- 产品列表 -->
 <div class="box1">
-  <div class="top"><td>${product.name}</td></div>
+  <div class="top"><td>${detailInfo.name}</td></div>
   <div class="middle1">
      <div class="middle1_left">
       七日年化收益率</br>
-     ${product.yearPro}
+     ${detailInfo.yearPro}
      </div>
      <div class="middle1_right">
        万份收益</br>
-    ${product.dayPro}
+    ${detailInfo.dayPro}
      </div>
   </div>
   <div class="middle2">
     <font size="3">购买信息</font></br>
-   ${product.buyInfo}
+   ${detailInfo.buyInfo}
   </div>
   <div class="middle3">
     <font size="3">赎回信息</font></br>
-   ${product.saleInfo}
+   ${detailInfo.saleInfo}
   </div>
   <div class="foot">
      <a href="#">

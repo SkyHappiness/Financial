@@ -25,16 +25,15 @@ public class ProductController {
       //从第一条开始 每页查询五条数据
       PageHelper.startPage(pn, 5);
       List<Product> products = productService.getProduct();
-      PageInfo page = new PageInfo(products,5);
+      PageInfo<Product> page = new PageInfo<>(products,5);
 	  model.addAttribute("pageInfo", page);
 	  return "product";
 	}
 	
 	//跳转产品详情页
 	@RequestMapping("toProductdetail")
-	public String getprodetail(Model model,Product product) {
-		int id=1;
-		 product=productService.findProductById(id);
+	public String getprodetail(Model model,int id) {
+		Product product=productService.findProductById(id);
 		model.addAttribute("detailInfo", product);
 		return "productdetail";	
 	}

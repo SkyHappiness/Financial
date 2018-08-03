@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%
     pageContext.setAttribute("path", request.getContextPath());
 %>
@@ -108,7 +109,7 @@
                         <td>${product.yearPro}</td>
                         <td>${product.dayPro}</td>
                         <td>${product.timeLong}</td>
-                        <td><a href="${path}/pro/toProductdetail">详情</a></td>
+                        <td><a href="${path}/pro/toProductdetail?id=${product.id}">详情</a></td>
                         </tr>
                     </c:forEach>
                 </table>
@@ -130,7 +131,7 @@
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                   <ul class="pagination">
-                    <li><a href="${path}/user/userInfo?pn=1">首页</a></li>
+                    <li><a href="${path}/pro/productInfo?pn=1">首页</a></li>
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
                           <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
