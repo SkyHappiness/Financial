@@ -65,6 +65,22 @@
     src="${path}/static/bootstrap-4.0.0-dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript"
     src="${path}/static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    
+<script type="text/javascript">
+function search()
+{
+	$.ajax(
+	type:"POST",
+	url:"${path}/pro/searchInfo",
+	data:{productName:$(#keyword).val()},
+	dataType:"json",
+	success:function(res){
+		
+	}
+	);
+}
+
+</script>
 </head>
 
 
@@ -81,10 +97,10 @@
     <div class="row">
         <div class="col-md-6">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="请输入检索关键字">
+                <input type="text" id="keyword" name="keyword" class="search" placeholder="请输入检索关键字" >
                 <span class="input-group-btn">
-                    <a href="#">
-                    <button class="btn btn-primary" >搜索</button>
+                    <a href="${path}/pro/pageInfo?pn=1">
+                    <button class="btn btn-primary" onclick="search();">搜索</button>
                     </a>
                 </span>
             </div>
@@ -124,14 +140,14 @@
         <div class="row">
             <!-- 分页文字信息，其中分页信息都封装在pageInfo中 -->
             <div class="col-md-6">
-                当前第：${pageInfo.pageNum}页，总共：${pageInfo.pages}页，总共：${pageInfo.total}条记录
+                 当前第${pageInfo.pageNum}页，总共${pageInfo.pages}页，总共${pageInfo.total}条记录
             </div>
 
         <!-- 分页条 -->
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                   <ul class="pagination">
-                    <li><a href="${path}/pro/productInfo?pn=1">首页</a></li>
+                    <li><a href="${path}/pro/productInfo?pn=1">首页</a></li>&nbsp;
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
                           <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
@@ -142,10 +158,10 @@
 
                     <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                         <c:if test="${page_Num == pageInfo.pageNum }">
-                            <li class="active"><a href="#">${ page_Num}</a></li>
+                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/pro/productInfo?pn=${ page_Num}">${page_Num}</a></li>
+                            <li><a href="${path}/pro/productInfo?pn=${ page_Num}">${page_Num}</a></li>&nbsp;
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">

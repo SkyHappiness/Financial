@@ -10,7 +10,7 @@
 <style type="text/css">
 .box1{
   width:500px;
-  height:420px;
+  height:400px;
   border: 1px solid #c0c0c0;
   margin-top: 20px;
 }
@@ -27,7 +27,7 @@
 .middle1{
   margin: 0 auto;
   width: auto;
-  height: 60px;
+  height: 80px;
   text-align:center;
   padding:12px;
 }
@@ -35,7 +35,7 @@
 
 .middle1_left{
   width:210px;
-  height:40px;
+  height:60px;
   float: left;
   text-align:center;
   padding:10px;
@@ -45,7 +45,7 @@
 
 .middle1_right{
   width:210px;
-  height:40px;
+  height:60px;
   float: left;
   text-align:center;
   margin-left:10px;

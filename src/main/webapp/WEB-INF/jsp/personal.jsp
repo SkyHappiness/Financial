@@ -9,14 +9,14 @@
 <style type="text/css">
 .box1{
   width:500px;
-  height:225px;
+  height:300px;
   margin-top: 20px;
 }
 
 .top{
   margin: 0 auto;
   width: auto;
-  height:40px;
+  height:100px;
   text-align:center;
   padding:12px;
    border: 1px solid #c0c0c0;
@@ -25,7 +25,7 @@
 .middle1{
   margin: 0 auto;
   width: auto;
-  height: 40px;
+  height: 80px;
   text-align:center;
   padding:12px;
    border: 1px solid #c0c0c0;
@@ -33,7 +33,7 @@
 .middle2{
   margin: 0 auto;
   width: auto;
-  height: 40px;
+  height: 80px;
   text-align:center;
   padding:12px;
   border: 1px solid #c0c0c0;
@@ -59,14 +59,14 @@
             </div>
 </div>
   <div class="top">
-    <td>总金额</td></br>
-    <td>${user.name}</td>
+    <td>总金额(元)</td></br>
+    <td>${buyMoney}</td>
   </div>
   <div class="middle1">
-     <a class="btn btn-primary" href="${path}/user/toAddUser">收益明细</a>
+     <a class="btn btn-primary" href="${path}/per/toProfileDetail">收益明细</a>
   </div>
   <div class="middle2">
-    <a class="btn btn-primary" href="${path}/user/toAddUser">交易明细</a>
+    <a class="btn btn-primary" href="${path}/per/toTransDetail">交易明细</a>
   </div>
  </div>
 </div>
