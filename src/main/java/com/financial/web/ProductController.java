@@ -21,7 +21,7 @@ public class ProductController {
 	
 	//列表展示
    @RequestMapping("productInfo")
-   public String getUsers(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model){
+   public String getProducts(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model){
       //从第一条开始 每页查询五条数据
       PageHelper.startPage(pn, 5);
       List<Product> products = productService.getProduct();
@@ -29,6 +29,16 @@ public class ProductController {
 	  model.addAttribute("pageInfo", page);
 	  return "product";
 	}
+   //按产品名搜索
+   @RequestMapping("searchInfo")
+   public String getSearchInfo(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model,String productName){
+	  PageHelper.startPage(pn, 5); 
+	  List<Product> searchProducts=productService.findProductByName(productName);
+	  PageInfo<Product> searchPage = new PageInfo<>(searchProducts,5);
+	  model.addAttribute("pageInfo", searchPage);
+	  return "product";	   
+   }
+   
 	
 	//跳转产品详情页
 	@RequestMapping("toProductdetail")
