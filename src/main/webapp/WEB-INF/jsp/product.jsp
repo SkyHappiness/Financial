@@ -65,22 +65,7 @@
     src="${path}/static/bootstrap-4.0.0-dist/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript"
     src="${path}/static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-    
-<script type="text/javascript">
-function search()
-{
-	$.ajax(
-	type:"POST",
-	url:"${path}/pro/searchInfo",
-	data:{productName:$(#keyword).val()},
-	dataType:"json",
-	success:function(res){
-		
-	}
-	);
-}
 
-</script>
 </head>
 
 
@@ -99,10 +84,16 @@ function search()
             <div class="input-group">
                 <input type="text" id="keyword" name="keyword" class="search" placeholder="请输入检索关键字" >
                 <span class="input-group-btn">
-                    <a href="${path}/pro/pageInfo?pn=1">
-                    <button class="btn btn-primary" onclick="search();">搜索</button>
-                    </a>
+                    <button class="btn btn-primary" id= "search" type="button">搜索</button>
                 </span>
+                <script type="text/javascript">
+					$("#search").on("click",function(){
+					var searchName = $("#keyword").val();
+					window.location.href="${path}/pro/searchInfo?productName="+searchName;
+					
+  				})
+
+</script>
             </div>
         </div>
     </div>
