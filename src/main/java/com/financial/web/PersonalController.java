@@ -40,12 +40,12 @@ public class PersonalController {
 		 PageInfo<ProfileInfo> page = new PageInfo<>(profileInfo,5);
 		 model.addAttribute("pageInfo", page); 
 		 
-//		 double allprofileMoney=profileservice.getallprofileMoney();
-//		 model.addAttribute("allprofileMoney", allprofileMoney); 
-//		 
-//		 double allyesterdayMoney=profileservice.getallyesterdayMoney();
-//		 model.addAttribute("allyesterdayMoney", allyesterdayMoney); 
-        return "profile";
+		 double allprofileMoney=profileservice.getallprofileMoney();
+		 model.addAttribute("allprofileMoney", allprofileMoney); 
+		 
+		 double allyesterdayMoney=profileservice.getallyesterdayMoney();
+		 model.addAttribute("allyesterdayMoney", allyesterdayMoney); 
+         return "profile";
     }
 	
 	@RequestMapping("toTransDetail")

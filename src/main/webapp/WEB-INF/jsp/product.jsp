@@ -89,8 +89,7 @@
                 <script type="text/javascript">
 					$("#search").on("click",function(){
 					var searchName = $("#keyword").val();
-					window.location.href="${path}/pro/searchInfo?productName="+searchName;
-					
+					window.location.href="${path}/pro/searchInfo?productName="+searchName;	
   				})
 
 </script>
