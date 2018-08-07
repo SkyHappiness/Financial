@@ -27,9 +27,10 @@
 <body>
     <h1>购买页面</h1>
     <form action="" name="userForm">
-         购买金额（元）：<input type="text" name="money"><br>
-          <input type="button" value="确认购买"
-            onclick="buyProduct()">
+    	 产品编号:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" value="${product.id}" disabled="true"/></br>
+    	 产品名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" value="${detailInfo.name}" disabled="true" /> </br>
+           购买金额(元):&nbsp;<input type="text" name="money"></br>
+          <input type="button" value="确认购买" onclick="addUser()">
     </form>
 
     <script type="text/javascript">
