@@ -32,5 +32,15 @@ public class ProductServiceImpl implements ProductService{
 		List<Product> products = productdao.findProductByName(name);
 		return products;
 	}
+	@Override
+	public int insertBuyInfo(Product product) {
+		int flag = 0;
+		try {
+			flag =  productdao.insertBuyInfo(product);			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
 
 }

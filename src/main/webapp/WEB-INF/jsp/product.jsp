@@ -82,7 +82,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="input-group">
-                <input type="text" id="keyword" name="keyword" class="search" placeholder="请输入检索关键字" >
+                <input type="text" id="keyword" name="keyword" class="search" placeholder="请输入产品名" >
                 <span class="input-group-btn">
                     <button class="btn btn-primary" id= "search" type="button">搜索</button>
                 </span>

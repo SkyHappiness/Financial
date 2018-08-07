@@ -15,4 +15,13 @@
 	<select id="findProductByName" parameterType="String" resultType="com.financial.entity.Product">
 		select * from product where name like "%"#{name}"%"
 	</select>
+	
+	<!-- 购买产品 -->
+	<!-- 插入 -->
+	<insert id="insertBuyInfo" parameterType="com.financial.entity.Product" keyProperty="id">
+		insert into buyinfo(product_id,product_name,money,
+		buy_time,start_time,end_time)values
+		(#{product_id},#{product_name},#{money},#{buy_time},
+		#{start_time},#{end_time})
+	</insert>
 </mapper>

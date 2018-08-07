@@ -3,7 +3,12 @@
 <%
     pageContext.setAttribute("path", request.getContextPath());
 %>
-
+<%  
+    String path = request.getContextPath();  
+    String basePath = request.getScheme() + "://"  
+            + request.getServerName() + ":" + request.getServerPort()  
+            + path + "/";  
+%>  
 
 <html>
 <head>
@@ -24,13 +29,13 @@
     <form action="" name="userForm">
          购买金额（元）：<input type="text" name="money"><br>
           <input type="button" value="确认购买"
-            onclick="addUser()">
+            onclick="buyProduct()">
     </form>
 
     <script type="text/javascript">
-        function addUser() {
+        function buyProduct() {
             var form = document.forms[0];
-            form.action = "<%=basePath %>user/insert";
+            form.action = "<%=basePath %>pro/buyProduct";
             form.method = "post";
             form.submit();
         }

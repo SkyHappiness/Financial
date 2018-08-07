@@ -10,5 +10,5 @@ public interface ProfileDao {
 	 //查询昨日收益
 	 public List<Double> getyesterdayMoney();
 	 //查询产品总收益
-	 public List<Double> getprofileMoney();
+	 public List<Double> getprofileMoney();	 
 }

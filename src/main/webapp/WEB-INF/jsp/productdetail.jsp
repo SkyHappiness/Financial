@@ -113,7 +113,7 @@
    ${detailInfo.saleInfo}
   </div>
   <div class="foot">
-     <a href="#">
+     <a href="${path}/pro/toBuyPro"> 
      <button class="btn btn-primary">购买</button>
      </a>
   </div>

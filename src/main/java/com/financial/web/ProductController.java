@@ -48,11 +48,19 @@ public class ProductController {
 		return "productdetail";	
 	}
 	
+	//跳到购买页面
+		@RequestMapping("toBuyPro")
+	    public String toBuyPro(){
+	        return "buyPro";
+	    }
 	//购买并跳转到交易明细列表
-	@RequestMapping("buyproduct")
+	@RequestMapping("buyProduct")
 	public String buypro(Model model,Product product) {
-		
-		return "";
+		if(product!=null)
+		{
+			productService.insertBuyInfo(product);
+		}
+		return "redirect:/per/toTransDetail";
 		
 	}
 	
