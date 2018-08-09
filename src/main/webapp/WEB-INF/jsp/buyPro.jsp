@@ -29,20 +29,30 @@
     <form action="" name="buyForm">
     	 产品编号:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="id" name="id" value="${product.id}" disabled="true"/></br>
     	 产品名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" name="name" value="${product.name}" disabled="true" /> </br>
-           购买金额(元):&nbsp;<input type="text" id="money" name="money"></br>
+                       购买金额(元):&nbsp;<input type="text" id="money" name="money" value=""/></br>
           <input type="button" value="确认购买" onclick="buyProduct()">
     </form>
 
     <script type="text/javascript">
         function buyProduct() {
-            buyInfo=new BuyInfo();
-            var productId=$("#id").val();
-            var productName=$("#name").val();
-            var money=$("#money").val();
-            
-            form.action = "<%=basePath %>pro/buyProduct";
-            form.method = "post";
-            form.submit();
+        	var buyInfo = {};
+        	buyInfo.productId = $("#id").val();
+        	buyInfo.productName = $("#name").val();
+        	buyInfo.money = $("#money").val();
+        	
+        	$.ajax({
+                url: "<%=basePath %>pro/buyProduct",
+                type: 'POST',
+                data: buyInfo,
+                success: function (data) {
+                    if(data > 0){
+                    	alert(" 购买成功!");
+                    	window.location.href="${path}/per/toTransDetail";	
+                    }else{
+                    	alert(" 购买失败，请检查...");
+                    }
+                }
+            })
         }
     </script>
 </body>

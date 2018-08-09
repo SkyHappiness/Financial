@@ -7,7 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.financial.enmu.Status;
 import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
 import com.financial.service.ProductService;
@@ -57,13 +59,18 @@ public class ProductController {
 	    }
 	//购买并跳转到交易明细列表
 	@RequestMapping("buyProduct")
-	public String buypro(Model model,BuyInfo buyInfo) {
-		if(buyInfo!=null)
-		{
-			productService.insertBuyInfo(buyInfo);
+	@ResponseBody
+	public int buypro(Model model,BuyInfo buyInfo) {
+		int status = Status.FAIL.getCode();
+		if(buyInfo==null){
+			return Status.FAIL.getCode();
 		}
-		return "redirect:/per/toTransDetail";
-		
+		try {
+			status = productService.insertBuyInfo(buyInfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
 	}
 	
 }
