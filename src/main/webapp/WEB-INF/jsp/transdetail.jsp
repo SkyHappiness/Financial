@@ -68,10 +68,10 @@
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                   <ul class="pagination">
-                    <li><a href="${path}/pro/productInfo?pn=1">首页</a></li>&nbsp;
+                    <li><a href="${path}/per/toTransDetail?pn=1">首页</a></li>&nbsp;
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
-                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                          <a href="${path}/per/toTransDetail?pn=${pageInfo.pageNum-1}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                           </a>
                         </li>
@@ -82,17 +82,17 @@
                             <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/pro/productInfo?pn=${ page_Num}">${page_Num}</a></li>&nbsp;
+                            <li><a href="${path}/per/toTransDetail?pn=${ page_Num}">${page_Num}</a></li>&nbsp;
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">
                         <li>
-                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum+1}" aria-label="Next">
+                          <a href="${path}/per/toTransDetail?pn=${pageInfo.pageNum+1}" aria-label="Next">
                             <span aria-hidden="true">&raquo;</span>
                           </a>
                         </li>
                     </c:if>   
-                    <li><a href="${path}/pro/productInfo?pn=${pageInfo.pages}">末页</a></li>
+                    <li><a href="${path}/per/toTransDetail?pn=${pageInfo.pages}">末页</a></li>
                   </ul>
                 </nav>
             </div>
