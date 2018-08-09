@@ -2,6 +2,7 @@ package com.financial.service;
 
 import java.util.List;
 
+import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
 
 public interface ProductService {
@@ -15,5 +16,5 @@ public interface ProductService {
 	  public List<Product> findProductByName(String name);
 	  
 	 //购买产品
-	  public int insertBuyInfo(Product product);
+	  public int insertBuyInfo(BuyInfo buyInfo);
 }

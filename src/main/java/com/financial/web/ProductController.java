@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
 import com.financial.service.ProductService;
 import com.github.pagehelper.PageHelper;
@@ -50,15 +51,16 @@ public class ProductController {
 	
 	//跳到购买页面
 		@RequestMapping("toBuyPro")
-	    public String toBuyPro(){
+	    public String toBuyPro(int id,Model model){
+			model.addAttribute("product", productService.findProductById(id));         
 	        return "buyPro";
 	    }
 	//购买并跳转到交易明细列表
 	@RequestMapping("buyProduct")
-	public String buypro(Model model,Product product) {
-		if(product!=null)
+	public String buypro(Model model,BuyInfo buyInfo) {
+		if(buyInfo!=null)
 		{
-			productService.insertBuyInfo(product);
+			productService.insertBuyInfo(buyInfo);
 		}
 		return "redirect:/per/toTransDetail";
 		

@@ -21,7 +21,7 @@
 	<insert id="insertBuyInfo" parameterType="com.financial.entity.Product" keyProperty="id">
 		insert into buyinfo(product_id,product_name,money,
 		buy_time,start_time,end_time)values
-		(#{product_id},#{product_name},#{money},#{buy_time},
-		#{start_time},#{end_time})
+		(#{productId},#{productName},#{money},#{buyTime},
+		#{startTime},#{endTime})
 	</insert>
 </mapper>

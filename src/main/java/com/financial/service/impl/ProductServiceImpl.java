@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.financial.dao.ProductDao;
+import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
 import com.financial.service.ProductService;
 
@@ -33,10 +34,10 @@ public class ProductServiceImpl implements ProductService{
 		return products;
 	}
 	@Override
-	public int insertBuyInfo(Product product) {
+	public int insertBuyInfo(BuyInfo buyInfo) {
 		int flag = 0;
 		try {
-			flag =  productdao.insertBuyInfo(product);			
+			flag =  productdao.insertBuyInfo(buyInfo);			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
