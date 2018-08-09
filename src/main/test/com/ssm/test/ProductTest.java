@@ -58,11 +58,13 @@ public class ProductTest {
 			}
 			buyInfo.setProductId(1);
 			buyInfo.setProductName("余额宝");
-			 buyInfo.setMoney(40000);
+			buyInfo.setMoney(40000);
+			
 			buyInfo.setBuyTime(new Date());
 			buyInfo.setStartTime(new Date());
 			buyInfo.setEndTime(new Date());
 			buyInfo.setFlag(0);
+		
 			System.out.println(buyInfo);
 		    int flag1=productService.insertBuyInfo(buyInfo);
 		    System.out.println(flag1);
