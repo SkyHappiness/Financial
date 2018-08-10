@@ -10,7 +10,11 @@
 <html>
 <head>
 <style type="text/css">
-
+.start{
+float:right;
+font-size:20px;
+color:blue;
+}
 </style>
 <meta charset="utf-8">
 <title>交易记录页面</title>
@@ -28,6 +32,9 @@
 <div class="row">
             <div class="col-md-12">
                 <h1>交易明细</h1>
+                <div class="start" >
+                   <a href="../index.jsp">回到首页</a>
+                   </div>
             </div>
 </div>
 
@@ -68,7 +75,7 @@
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                   <ul class="pagination">
-                    <li><a href="${path}/per/toTransDetail?pn=1">首页</a></li>&nbsp;
+                    <li><a href="${path}/per/toTransDetail?pn=1">首页</a></li>&nbsp;&nbsp;
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
                           <a href="${path}/per/toTransDetail?pn=${pageInfo.pageNum-1}" aria-label="Previous">
@@ -79,16 +86,16 @@
 
                     <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                         <c:if test="${page_Num == pageInfo.pageNum }">
-                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;
+                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/per/toTransDetail?pn=${ page_Num}">${page_Num}</a></li>&nbsp;
+                            <li><a href="${path}/per/toTransDetail?pn=${ page_Num}">${page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">
                         <li>
                           <a href="${path}/per/toTransDetail?pn=${pageInfo.pageNum+1}" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
+                            <span aria-hidden="true">&raquo;</span>&nbsp;&nbsp;
                           </a>
                         </li>
                     </c:if>   

@@ -32,7 +32,6 @@
                        购买金额(元):&nbsp;<input type="text" id="money" name="money" value=""/></br>
           <input type="button" value="确认购买" onclick="buyProduct()">
     </form>
-
     <script type="text/javascript">
         function buyProduct() {
         	var buyInfo = {};

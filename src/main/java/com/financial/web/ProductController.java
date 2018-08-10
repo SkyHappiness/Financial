@@ -23,7 +23,12 @@ import com.github.pagehelper.PageInfo;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-	
+	//首页
+	@RequestMapping("start")
+	public String getIndexPage() {
+		return "index";
+		
+	}
 	//列表展示
    @RequestMapping("productInfo")
    public String getProducts(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model){

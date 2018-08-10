@@ -10,7 +10,7 @@
 <head>
 <style type="text/css">
 .box1{
-  width:500px;
+  width:auto;
   height:420px;
   margin-top: 20px;
 }
@@ -27,7 +27,7 @@
   
 
 .middle1_left{
-  width:210px;
+  width:500px;
   height:80px;
   float: left;
   text-align:center;
@@ -36,7 +36,7 @@
 }
 
 .middle1_right{
-  width:210px;
+  width:500px;
   height:80px;
   float: left;
   text-align:center;
@@ -52,7 +52,11 @@
   padding:12px;
    margin-top: 10px;
 }
-
+.start{
+float:right;
+font-size:20px;
+color:blue;
+}
 </style>
 <meta charset="utf-8">
 <title>收益明细页面</title>
@@ -71,6 +75,9 @@
 <div class="row">
             <div class="col-md-12">
                 <h1>收益明细</h1>
+                <div class="start" >
+                   <a href="../index.jsp">回到首页</a>
+                   </div>
             </div>
 </div>
 <!-- -->
@@ -118,10 +125,10 @@
             <div class="col-md-6">
                 <nav aria-label="Page navigation">
                   <ul class="pagination">
-                    <li><a href="${path}/pro/productInfo?pn=1">首页</a></li>&nbsp;
+                    <li><a href="${path}/per/toProfileDetail?pn=1">首页</a></li>&nbsp;&nbsp;
                     <c:if test="${pageInfo.hasPreviousPage }">
                          <li>
-                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum-1}" aria-label="Previous">
+                          <a href="${path}/per/toProfileDetail?pn=${pageInfo.pageNum-1}" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
                           </a>
                         </li>
@@ -129,20 +136,20 @@
 
                     <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                         <c:if test="${page_Num == pageInfo.pageNum }">
-                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;
+                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/pro/productInfo?pn=${ page_Num}">${page_Num}</a></li>&nbsp;
+                            <li><a href="${path}/per/toProfileDetail?pn=${ page_Num}">${page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">
                         <li>
-                          <a href="${path}/pro/productInfo?pn=${pageInfo.pageNum+1}" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
+                          <a href="${path}/per/toProfileDetail?pn=${pageInfo.pageNum+1}" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>&nbsp;&nbsp;
                           </a>
                         </li>
                     </c:if>   
-                    <li><a href="${path}/pro/productInfo?pn=${pageInfo.pages}">末页</a></li>
+                    <li><a href="${path}/per/toProfileDetail?pn=${pageInfo.pages}">末页</a></li>
                   </ul>
                 </nav>
             </div>

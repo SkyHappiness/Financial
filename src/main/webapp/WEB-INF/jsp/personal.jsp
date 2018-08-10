@@ -38,7 +38,11 @@
   padding:12px;
   border: 1px solid #c0c0c0;
 }
-
+.start{
+float:right;
+font-size:20px;
+color:blue;
+}
 </style>
 <meta charset="utf-8">
 <title>个人中心页面</title>
@@ -56,6 +60,9 @@
 <div class="row">
             <div class="col-md-12">
                 <h1>个人中心</h1>
+                <div class="start" >
+                   <a href="../index.jsp">回到首页</a>
+                </div>
             </div>
 </div>
   <div class="top">

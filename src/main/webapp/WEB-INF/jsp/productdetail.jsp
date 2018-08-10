@@ -77,6 +77,11 @@
   text-align:center;
   padding:12px;
 }
+.start{
+margin-left:410px;
+font-size:20px;
+color:blue;
+}
 
 </style>
 <meta charset="utf-8">
@@ -91,6 +96,14 @@
 </head>
 <body>
 <div class="container">
+<div class="row">
+            <div class="col-md-12">
+                <h1>产品详情</h1>
+                  <div class="start" >
+                   <a href="../index.jsp">回到首页</a>
+                   </div>
+            </div>
+</div>
 <!-- 产品列表 -->
 <div class="box1">
   <div class="top"><td>${detailInfo.name}</td></div>
