@@ -11,4 +11,6 @@ public interface ProfileService {
 		 public double getallyesterdayMoney();
 		 //查询总的产品总收益
 		 public double getallprofileMoney();
+		//插入收益信息
+		 public int insertProfileInfo(ProfileInfo profileInfo);
 }

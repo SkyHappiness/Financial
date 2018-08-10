@@ -39,10 +39,14 @@
         	buyInfo.productName = $("#name").val();
         	buyInfo.money = $("#money").val();
         	
+        	var profileInfo={};
+         	profileInfo.profileProId= $("#id").val();
+         	profileInfo.profileProName= $("#name").val();
+         	
         	$.ajax({
                 url: "<%=basePath %>pro/buyProduct",
                 type: 'POST',
-                data: buyInfo,
+                data: {buyInfo,profileInfo},
                 success: function (data) {
                     if(data > 0){
                     	alert(" 购买成功!");
@@ -52,6 +56,9 @@
                     }
                 }
             })
+            
+           
+        	
         }
     </script>
 </body>

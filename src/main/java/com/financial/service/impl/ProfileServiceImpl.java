@@ -50,4 +50,18 @@ public class ProfileServiceImpl implements ProfileService{
 		return sum_proMoney;
 	}
 
+	@Override
+	public int insertProfileInfo(ProfileInfo profileInfo) {
+		// TODO Auto-generated method stub
+		int flag = 0;
+		try {
+		profileInfo.setProfileYestoday((double) 0);
+		profileInfo.setProfileMoney((double) 0);
+		flag=profiledao.insertProfileInfo(profileInfo);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
+
 }

@@ -2,6 +2,8 @@ package com.financial.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.financial.entity.ProfileInfo;
 
 public interface ProfileDao {
@@ -11,4 +13,8 @@ public interface ProfileDao {
 	 public List<Double> getyesterdayMoney();
 	 //查询产品总收益
 	 public List<Double> getprofileMoney();	 
+	 //插入收益信息
+	 public int insertProfileInfo(ProfileInfo profileInfo);
+	 //批量更新收益
+	 public int updateProfileBatch(@Param("list") List<ProfileInfo> list);
 }
