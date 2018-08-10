@@ -37,4 +37,15 @@ public class ProfileInfoTest {
 		double pro_money=profileService.getallprofileMoney();
 		System.out.println(pro_money);
 	}
+	
+	@Test
+	public void insertProfileInfo() {
+		ProfileInfo profileInfo = new ProfileInfo();
+		profileInfo.setProfileProId(3);
+		profileInfo.setProfileProName("朝朝盈1");
+		profileInfo.setProfileYestoday(0.0);
+		profileInfo.setProfileMoney(0.0);
+		int flag = profileService.insertProfileInfo(profileInfo);
+		System.out.println(flag);
+	}
 }

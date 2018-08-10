@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.financial.enmu.Status;
 import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
-import com.financial.entity.ProfileInfo;
 import com.financial.service.ProductService;
-import com.financial.service.ProfileService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -25,7 +23,6 @@ import com.github.pagehelper.PageInfo;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-	private ProfileService profileService;
 	
 	//首页
 	@RequestMapping("start")
@@ -71,14 +68,13 @@ public class ProductController {
 	//购买并跳转到交易明细列表
 	@RequestMapping(value = "buyProduct", method = RequestMethod.POST)
 	@ResponseBody
-	public int buypro(Model model,BuyInfo buyInfo,ProfileInfo profileInfo) {
+	public int buypro(Model model,BuyInfo buyInfo) {
 		int status = Status.FAIL.getCode();
 		if(buyInfo==null){
 			return Status.FAIL.getCode();
 		}
 		try {
-			status = productService.insertBuyInfo(buyInfo);
-			profileService.insertProfileInfo(profileInfo);
+			status = productService.insertBuyInfo(buyInfo);			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

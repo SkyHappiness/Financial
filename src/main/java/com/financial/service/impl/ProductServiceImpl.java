@@ -6,17 +6,24 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.financial.dao.ProductDao;
 import com.financial.entity.BuyInfo;
 import com.financial.entity.Product;
+import com.financial.entity.ProfileInfo;
 import com.financial.service.ProductService;
+import com.financial.service.ProfileService;
 
 @Service
 public class ProductServiceImpl implements ProductService{
 	
     @Autowired
 	private ProductDao productdao;
+    
+    @Autowired
+	private ProfileService profileService;
+    
 	@Override
 	public List<Product> getProduct() {
 		// TODO Auto-generated method stub
@@ -35,6 +42,8 @@ public class ProductServiceImpl implements ProductService{
 		List<Product> products = productdao.findProductByName(name);
 		return products;
 	}
+
+	@Transactional
 	@Override
 	public int insertBuyInfo(BuyInfo buyInfo) {
 		int flag = 0;
@@ -43,6 +52,13 @@ public class ProductServiceImpl implements ProductService{
 			Date endTime = getEndTime(buyInfo.getStartTime(), product.getTimeLong());
 			buyInfo.setEndTime(endTime);
 			flag =  productdao.insertBuyInfo(buyInfo);
+
+			ProfileInfo profileInfo = new ProfileInfo();
+			profileInfo.setProfileProId(buyInfo.getProductId());
+			profileInfo.setProfileProName(buyInfo.getProductName());
+			if (flag > 0) {
+				flag = profileService.insertProfileInfo(profileInfo);
+			}			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

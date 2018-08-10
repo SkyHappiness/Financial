@@ -20,7 +20,8 @@
 	<!-- 插入收益 -->
 	<insert id="insertProfileInfo" parameterType="com.financial.entity.ProfileInfo" keyProperty="id">
 		insert into profile(profile_pro_id,profile_pro_name,
-		profile_yesterday,profile_money,flag)values
+		profile_yesterday,profile_money,flag) 
+		values
 		(#{profileProId},#{profileProName},
 		#{profileYesterday},#{profileMoney},#{flag})
 	</insert>
@@ -31,22 +32,18 @@
 	  <trim prefix="set" suffixOverrides=",">
              <trim prefix="profile_yesterday=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                         <if test="item.profile_yesterday!=null">
-                         when profile_id=#{item.profile_id} then #{item.profile_yesterday}
-                         </if>
+                      when profile_id=#{item.profile_id} then #{item.profile_yesterday}  
                  </foreach>
               </trim>
               <trim prefix="profile_money=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                         <if test="item.profile_money!=null">
-                          when profile_id=#{item.profile_id} then #{item.profile_money}
-                         </if>
+                      when profile_id=#{item.profile_id} then #{item.profile_money}
                  </foreach>
               </trim>
       </trim>
 	 where profile_id in
 	 <foreach collection="list" index="index" item="item" separator="," open="(" close=")">
-	 
+	 	#{item.profile_id}
 	 </foreach>
 	 
 	

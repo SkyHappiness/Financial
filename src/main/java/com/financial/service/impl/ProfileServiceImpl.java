@@ -55,9 +55,9 @@ public class ProfileServiceImpl implements ProfileService{
 		// TODO Auto-generated method stub
 		int flag = 0;
 		try {
-		profileInfo.setProfileYestoday((double) 0);
-		profileInfo.setProfileMoney((double) 0);
-		flag=profiledao.insertProfileInfo(profileInfo);
+			profileInfo.setProfileYestoday(0.0);
+			profileInfo.setProfileMoney(0.0);
+			flag=profiledao.insertProfileInfo(profileInfo);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
