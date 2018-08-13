@@ -30,22 +30,30 @@
 	  <trim prefix="set" suffixOverrides=",">
              <trim prefix="profile_yesterday=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                      when profile_id=#{item.profile_id} then #{item.profile_yesterday}  
+                      when profile_id=#{item.profile_id} then #{item.profileYesterday}  
                  </foreach>
               </trim>
               <trim prefix="profile_money=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                      when profile_id=#{item.profile_id} then #{item.profile_money}
+                      when profile_id=#{item.profile_id} then #{item.profileMoney}
                  </foreach>
               </trim>
       </trim>
 	 where profile_id in
 	 <foreach collection="list" index="index" item="item" separator="," open="(" close=")">
 	 	#{item.profile_id}
-	 </foreach>
-	 
-	
+	 </foreach>	
 	</update>
+	
+	<!--查询收益信息，万份收益-->
+	<select id="getProfileInfoAndDayPro" resultType="com.financial.entity.ProfileInfo">
+		select pro.profile_id profileId,pro.profile_yesterday profileYesterday,
+		pro.profile_money profileMoney,pro.buy_money buyMoney,p.day_pro dayPro
+		from profile pro join product p
+		on pro.profile_pro_id = p.id
+		where pro.flag = 1
+	</select>
+	
 	
 	
 </mapper>

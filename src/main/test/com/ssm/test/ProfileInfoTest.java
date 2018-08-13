@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.financial.dao.ProfileDao;
 import com.financial.entity.ProfileInfo;
 import com.financial.service.ProfileService;
 
@@ -17,6 +18,8 @@ public class ProfileInfoTest {
 
 	@Autowired
 	private ProfileService profileService;
+	@Autowired
+	private ProfileDao profileDao;
 	@Test
 	public void testgetProfileInfo() {
 		List<ProfileInfo> allProfileInfo = profileService.getProfileInfo();
@@ -48,5 +51,13 @@ public class ProfileInfoTest {
 		profileInfo.setProfileMoney(0.0);
 		int flag = profileService.insertProfileInfo(profileInfo);
 		System.out.println(flag);
+	}
+	
+	@Test
+	public void testgetProfileInfoAndDayPro() {
+		List<ProfileInfo> allProfileInfo = profileDao.getProfileInfoAndDayPro();
+		for (ProfileInfo profileInfo : allProfileInfo) {
+			System.out.println(profileInfo);
+		}
 	}
 }

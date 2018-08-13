@@ -13,6 +13,9 @@ public class ProfileInfo {
 	private Double profileYesterday;
 	private Double profileMoney;
 	private Integer flag;
+	
+	//扩展属性
+	private Double dayPro;
 
 	public ProfileInfo() {
 		this.flag = 1;
@@ -73,14 +76,23 @@ public class ProfileInfo {
 		this.flag = flag;
 	}
 
-	
+
+	public Double getDayPro() {
+		return dayPro;
+	}
+
+	public void setDayPro(Double dayPro) {
+		this.dayPro = dayPro;
+	}
 
 	@Override
 	public String toString() {
-		return "Profile [profileId=" + profileId + ", profileProId=" + profileProId + ", profileProName="
-				+ profileProName + ", profileYesterday=" + profileYesterday + ", profileMoney=" + profileMoney + ", flag="
-				+ flag + "]";
+		return "ProfileInfo [profileId=" + profileId + ", profileProId=" + profileProId + ", profileProName="
+				+ profileProName + ", buyMoney=" + buyMoney + ", profileYesterday=" + profileYesterday
+				+ ", profileMoney=" + profileMoney + ", flag=" + flag + ", dayPro=" + dayPro + "]";
 	}
+	
+	
 
 	
 
