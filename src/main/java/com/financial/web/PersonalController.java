@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.financial.entity.BuyInfo;
-import com.financial.entity.Product;
 import com.financial.entity.ProfileInfo;
 import com.financial.service.BuyInfoService;
 import com.financial.service.ProfileService;

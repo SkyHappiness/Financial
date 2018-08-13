@@ -41,8 +41,9 @@ public class ProfileInfoTest {
 	@Test
 	public void insertProfileInfo() {
 		ProfileInfo profileInfo = new ProfileInfo();
-		profileInfo.setProfileProId(3);
+		profileInfo.setProfileProId(4);
 		profileInfo.setProfileProName("朝朝盈1");
+		profileInfo.setBuyMoney(3000);
 		profileInfo.setProfileYestoday(0.0);
 		profileInfo.setProfileMoney(0.0);
 		int flag = profileService.insertProfileInfo(profileInfo);

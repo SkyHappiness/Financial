@@ -9,6 +9,7 @@ public class ProfileInfo {
 	private Integer profileId;
 	private Integer profileProId;
 	private String profileProName;
+	private Integer buyMoney;
 	private Double profileYesterday;
 	private Double profileMoney;
 	private Integer flag;
@@ -40,7 +41,14 @@ public class ProfileInfo {
 	public void setProfileProName(String profileProName) {
 		this.profileProName = profileProName;
 	}
+	
+	public Integer getBuyMoney() {
+		return buyMoney;
+	}
 
+	public void setBuyMoney(Integer buyMoney) {
+		this.buyMoney = buyMoney;
+	}
 	public Double getprofileYesterday() {
 		return profileYesterday;
 	}
@@ -73,5 +81,9 @@ public class ProfileInfo {
 				+ profileProName + ", profileYesterday=" + profileYesterday + ", profileMoney=" + profileMoney + ", flag="
 				+ flag + "]";
 	}
+
+	
+
+	
 
 }

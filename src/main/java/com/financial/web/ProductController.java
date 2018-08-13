@@ -74,6 +74,7 @@ public class ProductController {
 			return Status.FAIL.getCode();
 		}
 		try {
+			//购买里调用“插入收益”方法
 			status = productService.insertBuyInfo(buyInfo);			
 		} catch (Exception e) {
 			e.printStackTrace();
