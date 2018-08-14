@@ -60,6 +60,9 @@ public class ProfileJob {
 				}
 			}
 			//更新flag
+			if (times.isEmpty()) {
+				return;
+			}
 			profileDao.updateFlag(times);
 		} catch (Exception e) {
 			e.printStackTrace();
