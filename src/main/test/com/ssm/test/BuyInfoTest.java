@@ -1,5 +1,6 @@
 package com.ssm.test;
 
+
 import java.util.List;
 
 import org.junit.Test;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.financial.dao.BuyInfoDao;
 import com.financial.entity.BuyInfo;
 import com.financial.service.BuyInfoService;
 
@@ -16,6 +18,7 @@ import com.financial.service.BuyInfoService;
 public class BuyInfoTest {
 	@Autowired
 	private BuyInfoService buyInfoService;
+	
 	
 	@Test
 	public void testgetBuyInfo() {
@@ -31,4 +34,5 @@ public class BuyInfoTest {
 		int money=buyInfoService.getBuyMoney();
 		System.out.println(money);
 	}
+	
 }

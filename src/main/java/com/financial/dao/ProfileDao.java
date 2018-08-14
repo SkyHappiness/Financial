@@ -20,5 +20,5 @@ public interface ProfileDao {
 	 //查询收益信息，万份收益
 	 public List<ProfileInfo> getProfileInfoAndDayPro();
 	 //更新Flag
-	 public void updateFlag();
+	 public int updateFlag(@Param("list") List<Long> list);
 }

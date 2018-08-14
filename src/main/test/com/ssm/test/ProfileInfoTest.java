@@ -1,5 +1,6 @@
 package com.ssm.test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -59,5 +60,12 @@ public class ProfileInfoTest {
 		for (ProfileInfo profileInfo : allProfileInfo) {
 			System.out.println(profileInfo);
 		}
+	}
+	@Test
+	public void testUpdateFlag() {
+		List<Long> list = new ArrayList<>();
+		list.add(1534251446465l);
+		int flag = profileDao.updateFlag(list);
+		System.out.println(flag);
 	}
 }

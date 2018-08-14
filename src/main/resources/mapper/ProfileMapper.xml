@@ -55,12 +55,14 @@
 	</select>
 	
 	<!-- 更新flag -->
-	<update id="updateFlag">
-	   profile set profile.flag=0
-	   where profile.time in
-	   <foreach collection="list" item="time" open="(" separator="," close=")">
-	   
-	   </foreach>
+	<update id="updateFlag" parameterType="java.util.List">
+	   update profile
+	   set flag=0
+	   where time in
+	   <foreach collection="list" index="index" item="item" 
+        	separator="," open="(" close=")">
+        	#{item,jdbcType=BIGINT}
+    	</foreach>
 	</update>
 	
 	
