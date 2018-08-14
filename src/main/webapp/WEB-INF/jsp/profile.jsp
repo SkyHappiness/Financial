@@ -98,12 +98,14 @@ color:blue;
                     <tr>
                         <th>编号</th>
                         <th>产品名</th>
+                        <th>昨日收益</th>
                         <th>累计收益</th>
                     </tr>
                     <c:forEach items="${pageInfo.list}" var="profileInfo">
                         <tr>
                         <td>${profileInfo.profileId}</td>
                         <td>${profileInfo.profileProName}</td>
+                        <td>${profileInfo.profileYesterday}</td>
                         <td>${profileInfo.profileMoney}</td>
                         </tr>
                     </c:forEach>
