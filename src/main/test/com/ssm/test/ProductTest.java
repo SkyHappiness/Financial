@@ -64,6 +64,7 @@ public class ProductTest {
 			buyInfo.setStartTime(new Date());
 			buyInfo.setEndTime(new Date());
 			buyInfo.setFlag(0);
+			buyInfo.setTime(System.currentTimeMillis());
 		
 			System.out.println(buyInfo);
 		    int flag1=productService.insertBuyInfo(buyInfo);

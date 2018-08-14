@@ -18,6 +18,7 @@ public class BuyInfo {
 	private Date startTime;
 	private Date endTime;
 	private Integer flag;
+	private long time;
 	
 	
 	
@@ -25,6 +26,7 @@ public class BuyInfo {
 		this.buyTime = new Date();
 		this.startTime = getNextDate(new Date());
 		this.flag = 1;
+		this.time=System.currentTimeMillis();
 	}
 	public Integer getBuyId() {
 		return buyId;
@@ -74,11 +76,18 @@ public class BuyInfo {
 	public void setFlag(Integer flag) {
 		this.flag = flag;
 	}
+	
+	public long getTime() {
+		return time;
+	}
+	public void setTime(long time) {
+		this.time = time;
+	}
 	@Override
 	public String toString() {
 		return "BuyInfo [buyId=" + buyId + ", productId=" + productId + ", productName=" + productName + ", money="
 				+ money + ", buyTime=" + buyTime + ", startTime=" + startTime + ", endTime=" + endTime + ", flag="
-				+ flag + "]";
+				+ flag + ", time=" + time + "]";
 	}
 	
 	/**
@@ -104,6 +113,7 @@ public class BuyInfo {
 		Date startTime = sdf2.parse(startTimeString);
 		return startTime;
 	}
+	
 	
 	
 }

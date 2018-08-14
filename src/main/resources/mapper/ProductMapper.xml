@@ -20,8 +20,8 @@
 	<!-- 插入 -->
 	<insert id="insertBuyInfo" parameterType="com.financial.entity.Product" keyProperty="id">
 		insert into buyinfo(product_id,product_name,money,
-		buy_time,start_time,end_time,flag)values
+		buy_time,start_time,end_time,flag,time)values
 		(#{productId},#{productName},#{money},#{buyTime},
-		#{startTime},#{endTime},#{flag})
+		#{startTime},#{endTime},#{flag},#{time})
 	</insert>
 </mapper>

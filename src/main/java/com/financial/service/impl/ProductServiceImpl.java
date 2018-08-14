@@ -57,6 +57,7 @@ public class ProductServiceImpl implements ProductService{
 			profileInfo.setProfileProId(buyInfo.getProductId());
 			profileInfo.setProfileProName(buyInfo.getProductName());
 			profileInfo.setBuyMoney(buyInfo.getMoney());
+			profileInfo.setTime(buyInfo.getTime());
 			if (flag > 0) {
 				flag = profileService.insertProfileInfo(profileInfo);
 			}			

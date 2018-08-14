@@ -19,9 +19,9 @@
 	
 	<!-- 插入收益 -->
 	<insert id="insertProfileInfo" parameterType="com.financial.entity.ProfileInfo" keyProperty="id">
-		insert into profile(profile_pro_id,profile_pro_name,buy_money,profile_yesterday,profile_money,flag) 
+		insert into profile(profile_pro_id,profile_pro_name,buy_money,profile_yesterday,profile_money,flag,time) 
 		values
-		(#{profileProId},#{profileProName},#{buyMoney},#{profileYesterday},#{profileMoney},#{flag})
+		(#{profileProId},#{profileProName},#{buyMoney},#{profileYesterday},#{profileMoney},#{flag},#{time})
 	</insert>
 	
 	<!-- 批量更新收益 -->

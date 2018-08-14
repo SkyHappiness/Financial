@@ -13,6 +13,7 @@ public class ProfileInfo {
 	private Double profileYesterday;
 	private Double profileMoney;
 	private Integer flag;
+	private long time;
 	
 	//扩展属性
 	private Double dayPro;
@@ -84,13 +85,21 @@ public class ProfileInfo {
 	public void setDayPro(Double dayPro) {
 		this.dayPro = dayPro;
 	}
+	public long getTime() {
+		return time;
+	}
 
+	public void setTime(long time) {
+		this.time = time;
+	}
 	@Override
 	public String toString() {
 		return "ProfileInfo [profileId=" + profileId + ", profileProId=" + profileProId + ", profileProName="
 				+ profileProName + ", buyMoney=" + buyMoney + ", profileYesterday=" + profileYesterday
-				+ ", profileMoney=" + profileMoney + ", flag=" + flag + ", dayPro=" + dayPro + "]";
+				+ ", profileMoney=" + profileMoney + ", flag=" + flag + ", dayPro=" + dayPro + ", time=" + time + "]";
 	}
+
+
 	
 	
 
