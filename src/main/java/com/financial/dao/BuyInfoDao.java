@@ -9,5 +9,6 @@ public interface BuyInfoDao {
 		 public List<BuyInfo> getBuyInfo();
 		 //获取交易金额
 		 public List<Integer> getBuyMoney();
+
 		 
 }

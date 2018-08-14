@@ -19,4 +19,6 @@ public interface ProfileDao {
 	 public int updateProfileBatch(@Param("list") List<ProfileInfo> list);
 	 //查询收益信息，万份收益
 	 public List<ProfileInfo> getProfileInfoAndDayPro();
+	 //更新Flag
+	 public void updateFlag();
 }

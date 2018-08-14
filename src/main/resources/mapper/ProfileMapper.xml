@@ -30,18 +30,18 @@
 	  <trim prefix="set" suffixOverrides=",">
              <trim prefix="profile_yesterday=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                      when profile_id=#{item.profile_id} then #{item.profileYesterday}  
+                      when profile_id=#{item.profileId} then #{item.profileYesterday}  
                  </foreach>
               </trim>
               <trim prefix="profile_money=case" suffix="end,">
                  <foreach collection="list" item="item" index="index">
-                      when profile_id=#{item.profile_id} then #{item.profileMoney}
+                      when profile_id=#{item.profileId} then #{item.profileMoney}
                  </foreach>
               </trim>
       </trim>
 	 where profile_id in
 	 <foreach collection="list" index="index" item="item" separator="," open="(" close=")">
-	 	#{item.profile_id}
+	 	#{item.profileId}
 	 </foreach>	
 	</update>
 	
@@ -53,6 +53,16 @@
 		on pro.profile_pro_id = p.id
 		where pro.flag = 1
 	</select>
+	
+	<!-- 更新flag -->
+	<update id="updateFlag">
+	   profile set profile.flag=0
+	   where profile.time in
+	   <foreach collection="list" item="time" open="(" separator="," close=")">
+	   
+	   </foreach>
+	</update>
+	
 	
 	
 	
