@@ -1,5 +1,7 @@
 package com.financial.entity;
 
+import java.util.Date;
+
 /*
  * author: hxy
  * time:   2018-7-31
@@ -98,6 +100,8 @@ public class ProfileInfo {
 				+ profileProName + ", buyMoney=" + buyMoney + ", profileYesterday=" + profileYesterday
 				+ ", profileMoney=" + profileMoney + ", flag=" + flag + ", dayPro=" + dayPro + ", time=" + time + "]";
 	}
+
+	
 
 
 	
