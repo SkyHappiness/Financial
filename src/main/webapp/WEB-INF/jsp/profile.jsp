@@ -96,7 +96,7 @@ color:blue;
             <div class="col-md-12">
                 <table class="table table-hover">
                     <tr>
-                        <th>编号</th>
+                        <th>收益编号</th>
                         <th>产品名</th>
                         <th>昨日收益</th>
                         <th>累计收益</th>

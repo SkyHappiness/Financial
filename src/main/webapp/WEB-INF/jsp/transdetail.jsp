@@ -43,7 +43,7 @@ color:blue;
             <div class="col-md-12">
                 <table class="table table-hover">
                     <tr>
-                        <th>编号</th>
+                        <th>购买编号</th>
                         <th>产品名</th>
                         <th>购买金额</th>
                         <th>起息时间</th>

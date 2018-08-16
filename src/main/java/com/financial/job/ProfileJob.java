@@ -43,7 +43,7 @@ public class ProfileJob {
 		}
     }
 	
-	//更新过期收益的flag
+	//更新过期购买的flag
 	@Scheduled(cron="0 0 9 * * ?")
     public void flagUpdate(){
 		List<Long> times = new ArrayList<>();
@@ -53,13 +53,13 @@ public class ProfileJob {
 			if (list.isEmpty()) {
 				return;
 			}
-			//获取所有过期的购买信息
+			//获取所有过期购买
 			for (BuyInfo buyInfo : list) {
 				if (buyInfo.getEndTime().getTime() < System.currentTimeMillis()) {
 					times.add(buyInfo.getTime());
 				}
 			}
-			//更新flag
+			//更新过期购买flag
 			if (times.isEmpty()) {
 				return;
 			}

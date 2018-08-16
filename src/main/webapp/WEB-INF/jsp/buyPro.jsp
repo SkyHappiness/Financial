@@ -25,6 +25,8 @@
 </head>
 
 <body>
+<div class="container">
+<div class="box1">
     <h1>购买页面</h1>
     <form action="" name="buyForm">
     	 产品编号:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="id" name="id" value="${product.id}" disabled="true"/></br>
@@ -51,11 +53,10 @@
                     	alert(" 购买失败，请检查...");
                     }
                 }
-            })
-            
-           
-        	
+            }) 	
         }
     </script>
+</div>
+</div>
 </body>
 </html>
