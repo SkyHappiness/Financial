@@ -113,7 +113,7 @@ color:blue;
                         <th>产品名</th>
                         <th>七日年化收益</th>
                         <th>万份收益</th>
-                        <th>投资期限</th>
+                        <th>投资期限(天)</th>
                     </tr>
                     <c:forEach items="${pageInfo.list}" var="product">
                         <tr>

@@ -11,7 +11,7 @@
 <style type="text/css">
 .box1{
   width:auto;
-  height:420px;
+  height:480px;
   margin-top: 20px;
 }
  
@@ -36,7 +36,7 @@
 }
 
 .middle1_right{
-  width:500px;
+  width:300px;
   height:80px;
   float: left;
   text-align:center;
@@ -47,7 +47,7 @@
 .middle2{
   margin: 0 auto;
   width: auto;
-  height: 100px;
+  height: 300px;
   text-align:center;
   padding:12px;
    margin-top: 10px;
