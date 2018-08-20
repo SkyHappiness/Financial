@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
     pageContext.setAttribute("path", request.getContextPath());
 %>
@@ -54,8 +55,8 @@ color:blue;
                         <td>${buyInfo.buyId}</td>
                         <td>${buyInfo.productName }</td>
                         <td>${buyInfo.money}</td>
-                        <td>${buyInfo.startTime}</td>
-                        <td>${buyInfo.endTime}</td>
+                        <td><fmt:formatDate type="both" value="${buyInfo.startTime}" /></td>
+                        <td><fmt:formatDate type="both" value="${buyInfo.endTime}" /></td>
                         </tr>
                     </c:forEach>
                 </table>
