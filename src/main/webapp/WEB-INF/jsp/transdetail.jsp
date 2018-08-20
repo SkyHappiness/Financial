@@ -86,10 +86,10 @@ color:blue;
 
                     <c:forEach items="${pageInfo.navigatepageNums }" var="page_Num">
                         <c:if test="${page_Num == pageInfo.pageNum }">
-                            <li class="active"><a href="#">${ page_Num}</a></li>&nbsp;&nbsp;
+                            <li class="active"><a href="#">${page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                         <c:if test="${page_Num != pageInfo.pageNum }">
-                            <li><a href="${path}/per/toTransDetail?pn=${ page_Num}">${page_Num}</a></li>&nbsp;&nbsp;
+                            <li><a href="${path}/per/toTransDetail?pn=${page_Num}">${page_Num}</a></li>&nbsp;&nbsp;
                         </c:if>
                     </c:forEach> 
                     <c:if test="${pageInfo.hasNextPage }">
