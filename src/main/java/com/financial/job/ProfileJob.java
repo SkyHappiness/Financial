@@ -21,7 +21,7 @@ public class ProfileJob {
 	@Autowired
 	private ProfileDao profileDao;
 	
-	@Scheduled(cron="0 0 8 * * ?")
+	@Scheduled(cron="0 0 10 * * ?")
     public void profileUpdate(){
 		try {
 			//查询所有有效收益信息
