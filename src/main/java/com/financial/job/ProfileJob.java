@@ -31,7 +31,7 @@ public class ProfileJob {
 			}
 			for (ProfileInfo profileInfo : list) {
 				//计算收益
-				double profile = profileInfo.getBuyMoney() * profileInfo.getDayPro() / 10000;
+				double profile = (double)Math.round(profileInfo.getBuyMoney() * profileInfo.getDayPro() / 10000 * 1000) / 1000;
 				profileInfo.setProfileYestoday(profile);
 				profileInfo.setProfileMoney(profileInfo.getProfileMoney() + profile);				
 			}
